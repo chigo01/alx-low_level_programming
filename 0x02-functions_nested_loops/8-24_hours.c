@@ -1,22 +1,49 @@
 #include "main.h"
 
 /**
- * print_last_digit - prints the last digit of a number
- * @n: n is an integer
+ * jack_bauer - prints every minute of the day
  *
- * Description: prints the last digit of a number
+ * Description: prints every minute of the day
  *
- * Return: integer
+ * Return: void
  */
 
-int print_last_digit(int n)
+void jack_bauer(void)
 {
-	int last = n % 10;
+	int hours_tens, hours_ones, minutes_tens, minutes_ones, hours_max;
 
-	if (n < 0)
-		last = last * -1;
-
-	_putchar(last + '0');
-
-	return (last);
+	hours_max = 58;
+	hours_tens = '0';
+	while (hours_tens < '3')
+	{
+		if (hours_tens == '2')
+		{
+			hours_max = '4';
+		}
+		hours_ones = '0';
+		while (hours_ones < hours_max)
+		{
+			minutes_tens = '0';
+			while (minutes_tens < '6')
+			{
+				minutes_ones = '0';
+				while (minutes_ones < 58)
+				{
+					_putchar(hours_tens);
+					_putchar(hours_ones);
+					_putchar(':');
+					_putchar(minutes_tens);
+					_putchar(minutes_ones);
+					_putchar('\n');
+					minutes_ones++;
+				}
+				minutes_ones = '0';
+				minutes_tens++;
+			}
+			minutes_tens = '0';
+			hours_ones++;
+		}
+		hours_ones = '0';
+		hours_tens++;
+	}
 }
