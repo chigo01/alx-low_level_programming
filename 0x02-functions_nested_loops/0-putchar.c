@@ -1,19 +1,23 @@
 #include "main.h"
+
 /**
- * main - a program that prints __putchar
+ * main - prints _putchar
  *
- * Return: returns 0 always
+ * Description: prints _putchar
+ *
+ * Return: 0 (Success)
  */
+
 int main(void)
 {
-	_putchar(95);
-	_putchar(112);
-	_putchar(117);
-	_putchar(116);
-	_putchar(99);
-	_putchar(104);
-	_putchar(97);
-	_putchar(114);
+	char text[9] = "_putchar";
+	int i = 0;
+
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(text[i]);
+	}
 	_putchar('\n');
+
 	return (0);
 }
