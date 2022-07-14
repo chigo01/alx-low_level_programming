@@ -1,1 +1,1 @@
-Pointers and arrays
+my pointer 
