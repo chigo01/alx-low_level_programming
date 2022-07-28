@@ -2,21 +2,19 @@
 #include <stdlib.h>
 
 /**
- * *malloc_checked -function that allocates memory using malloc
- * @b the size of memory to be allocated
+ * malloc_checked - cause normal process termination with a status value of 98
+ *
+ * @b: allocated memory
  *
  * Return: a pointer to the allocated memory
  */
+void *malloc_checked(unsigned int b)
+{
+    void *i;
 
- void *malloc_checked(unsigned int b)
- {
-     void *prt = malloc(b);
+    i = malloc(b);
+    if (i == NULL)
+        exit(98);
+    return (i);
 
-     if (prt == NULL)
-     {
-         exit(98);
-     }
-
-
-     return (prt);
- }
+}
