@@ -13,17 +13,13 @@
         return;
      if ((*d).name == NULL)
      {
-         d->name = "(nil)";
-         printf("%name:%s\n", d->name);
-     }
-      if ((*d).age)
-     {
-         printf("%age:%d\n", d->age);
-     }
-      if ((*d).owner == NULL)
-     {
-          d->owner = "(nil)";
-         printf("%name:%s\n", d->owner);
+         (*d).name = "(nil)";
      }
 
+      if ((*d).owner == NULL)
+     {
+          (*d).owner = "(nil)";
+     }
+
+     printf("Name: %s\nAge: %f\nOwner: %s\n", (*d).name, (*d).age, (*d).owner);
  }
