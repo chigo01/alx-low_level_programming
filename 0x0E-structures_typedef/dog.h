@@ -1,5 +1,5 @@
-#ifndef DOG_H_INCLUDED
-#define DOG_H_INCLUDED
+#ifndef DOG
+#define DOG
 
 /**
  * struct dog - dog class
